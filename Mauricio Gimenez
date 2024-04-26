@@ -1,0 +1,23 @@
+public class Clase2 {
+
+    public static void main(String[] args) {
+        int[] edades = {34, 16, 22, 12, 45};
+        int sumaAdultos = 0, sumaMenores = 0, contAdultos = 0, contMenores = 0;
+        
+        for (int edad : edades) {
+            if (edad >= 18) {
+                sumaAdultos += edad;
+                contAdultos++;
+            } else {
+                sumaMenores += edad;
+                contMenores++;
+            }
+        }
+        
+        double promedioAdultos = (contAdultos > 0) ? (double) sumaAdultos / contAdultos : 0;
+        double promedioMenores = (contMenores > 0) ? (double) sumaMenores / contMenores : 0;
+        
+        System.out.println("Promedio de edad de adultos: " + promedioAdultos);
+        System.out.println("Promedio de edad de menores: " + promedioMenores);
+    }
+}
